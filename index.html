@@ -1,48 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KLLOVR WEAR</title>
+    <title>Kllovrwear</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .content {
-            padding: 20px;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
+        /* Include all your CSS styling here */
+        body { font-family: Arial, sans-serif; }
+        /* Add additional styles as needed */
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to KLLOVR WEAR</h1>
+        <h1>Welcome to Kllovrwear</h1>
+        <!-- Include your navigation here -->
     </header>
-    <div class="content">
-        <p>This is the official site of KLLOVR WEAR. Explore our latest collection!</p>
-        <script>
-            console.log('Welcome to KLLOVR WEAR!');
-        </script>
-    </div>
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <h3>Product 1</h3>
+                <p>Description of product 1.</p>
+                <p>Price: $XX.XX</p>
+            </div>
+            <div class="product">
+                <h3>Product 2</h3>
+                <p>Description of product 2.</p>
+                <p>Price: $XX.XX</p>
+            </div>
+            <!-- Add more product sections as needed -->
+        </section>
+        <section id="order-form">
+            <h2>Order Form</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="product">Select Product:</label><br>
+                <select id="product" name="product">
+                    <option value="product1">Product 1</option>
+                    <option value="product2">Product 2</option>
+                    <!-- Add more product options as needed -->
+                </select><br>
+                <input type="submit" value="Order">
+            </form>
+        </section>
+        <section id="carousel">
+            <h2>Featured Items</h2>
+            <div class="carousel">
+                <!-- Carousel functionality with images -->
+            </div>
+            <script>
+                // Include JavaScript for carousel functionality
+                let currentIndex = 0;
+                // Add your carousel logic here
+            </script>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2026 KLLOVR WEAR</p>
+        <p>&copy; 2026 Kllovrwear. All rights reserved.</p>
     </footer>
 </body>
 </html>
