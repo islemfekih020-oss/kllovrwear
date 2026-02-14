@@ -251,10 +251,10 @@
         }
 
         .product-image {
-            height: 300px;
-            background-color: #ddd;
+            width: 100%;
+            background-color: white;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             color: #777;
             font-size: 3rem;
@@ -263,8 +263,8 @@
         /* Placeholder styling for images */
         .product-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
         }
 
         .product-info {
@@ -396,13 +396,11 @@
         .carousel-container {
             position: relative;
             width: 100%;
-            height: 100%;
         }
         
         .carousel-slides {
             display: flex;
             width: 100%;
-            height: 100%;
             overflow-x: auto;
             overflow-y: hidden;
             scroll-snap-type: x mandatory;
@@ -418,15 +416,13 @@
         .carousel-slide {
             flex: 0 0 100%;
             width: 100%;
-            height: 100%;
             scroll-snap-align: start;
         }
 
         .carousel-slide img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
+            height: auto;
+            display: block;
         }
 
         .carousel-dots {
@@ -547,10 +543,89 @@
     <section id="products" class="products">
         <h2 class="section-title">Featured Collection</h2>
         <div class="product-grid">
+            <!-- Product 6 (Polo shirt zip up) -->
+            <div class="product-card">
+                <div class="product-image" style="padding: 0; background-color: white;">
+                    <div class="carousel-container" id="carousel-product-6">
+                        <div class="carousel-slides" onscroll="updateDots('carousel-product-6')">
+                            <div class="carousel-slide">
+                                <img src="polo_zip_1.jpg" alt="Polo shirt zip up 1" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="polo_zip_2.jpg" alt="Polo shirt zip up 2" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="polo_zip_3.jpg" alt="Polo shirt zip up 3" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="polo_zip_4.jpg" alt="Polo shirt zip up 4" draggable="false">
+                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <div class="dot active" onclick="scrollToSlide('carousel-product-6', 0)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-6', 1)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-6', 2)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-6', 3)"></div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide('carousel-product-6', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="changeSlide('carousel-product-6', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Polo shirt zip up</h3>
+                    <p class="product-price">3300.00DA</p>
+                    <button class="btn-order" onclick="selectProduct('Polo shirt zip up', 3300)">Order This</button>
+                </div>
+            </div>
+            <!-- Product 5 (Nike Ensemble) -->
+            <div class="product-card">
+                <div class="product-image" style="padding: 0; background-color: white;">
+                    <div class="carousel-container" id="carousel-product-5">
+                        <div class="carousel-slides" onscroll="updateDots('carousel-product-5')">
+                            <div class="carousel-slide">
+                                <img src="nike_ensemble_1.jpg" alt="Ensemble nike 1" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="nike_ensemble_2.jpg" alt="Ensemble nike 2" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="nike_ensemble_3.jpg" alt="Ensemble nike 3" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="nike_ensemble_4.jpg" alt="Ensemble nike 4" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="nike_ensemble_5.jpg" alt="Ensemble nike 5" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="nike_ensemble_6.jpg" alt="Ensemble nike 6" draggable="false">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="nike_ensemble_7.jpg" alt="Ensemble nike 7" draggable="false">
+                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <div class="dot active" onclick="scrollToSlide('carousel-product-5', 0)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-5', 1)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-5', 2)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-5', 3)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-5', 4)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-5', 5)"></div>
+                            <div class="dot" onclick="scrollToSlide('carousel-product-5', 6)"></div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide('carousel-product-5', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="carousel-btn next" onclick="changeSlide('carousel-product-5', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Ensemble nike</h3>
+                    <p class="product-price">4800.00DA</p>
+                    <button class="btn-order" onclick="selectProduct('Ensemble nike', 4800)">Order This</button>
+                </div>
+            </div>
             <!-- Product 1 -->
             <div class="product-card">
                 <div class="product-image">
-                    <i class="fa-solid fa-ralph_ensemble_3.jpg"></i>
                      <img src="ralph_ensemble_3.jpg" alt="Ensemble ">
                 </div>
                 <div class="product-info">
